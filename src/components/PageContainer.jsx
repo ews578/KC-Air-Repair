@@ -36,7 +36,7 @@ export default function PageContainer() {
   };
 
   return (
-    <div>
+    <div className="page-container"> {/* Add a CSS class for styling */}
       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
       <main className="mx-3">{renderPage()}</main>
     </div>
