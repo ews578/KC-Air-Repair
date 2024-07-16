@@ -4,13 +4,10 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image"; // Import the Image component
- 
-
 
 function Home() {
   return (
     <>
-
       <ContainerIntro />
       <ServicesProvided />
       <ServiceArea />
@@ -40,16 +37,20 @@ function ContainerIntro() {
   );
 }
 
-
 function ServicesProvided() {
   return (
     <div className="services-provided">
       <Container>
         <Row>
           <Col xs={6} md={4}>
-            <Image src="assets/coolfam.jpg" rounded /> {/* Use the Image component with the correct src */}
+            <Image src="assets/coolfam.jpg" rounded />{" "}
+            {/* Use the Image component with the correct src */}
             <h1>Services We Offer</h1>
-            <p>A list of services placed here</p>
+            <p>
+              A/C Repair A/C Tune-Up A/C Installation Furnace Installation
+              Furnace Repair Furncae Tune-Up Water Heater Installation
+              Humidifier Installation
+            </p>
           </Col>
         </Row>
       </Container>
@@ -60,8 +61,21 @@ function ServicesProvided() {
 function ServiceArea() {
   return (
     <div className="service-area">
-      <h1>Areas we service</h1>
-      <p>A table of cities of where we service will be placed here</p>
+      <h1>Areas We Service </h1>
+      <Container>
+        <Row>
+          <Col xs={6} md={4}>
+            <Image src="assets/kcmaps.jpg" rounded />{" "}
+            <p>
+              {" "}
+              Kansas City, MO Mission, KS Leawood, KS Overland Park, KS Prairie
+              Village, KS Lenexa, KS Shawnee, KS Parkville, MO Olathe, KS
+              Gladstone, MO, Leavenworth, KS, Lansing, KS, Basehor, KS, Bonner
+              Springs, KS
+            </p>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
@@ -69,8 +83,27 @@ function ServiceArea() {
 function Choice() {
   return (
     <div className="choice">
-      <h1>Why choose us?</h1>
-      <p>A paragraph explaining why we are the best option for heating and cooling services in the Kansas City area</p>
+      <Container>
+        <Row>
+          <Col xs={6} md={4}>
+            <Image src="assets/inspect.jpg" rounded style={{ width: '200%', height: 'auto' }} /> 
+            <h1>Why choose us?</h1>
+            <p>
+              When it comes to your HVAC needs, choosing KC Air Repair means
+              choosing reliability, expertise, and unparalleled customer
+              service. With years of experience in the industry, our team of
+              skilled technicians is committed to delivering high-quality
+              repairs, installations, and maintenance services tailored to meet
+              your specific requirements. We pride ourselves on our attention to
+              detail and use of the latest technology to ensure efficient and
+              effective solutions for your heating and cooling systems. At KC
+              Air Repair, we prioritize customer satisfaction above all else,
+              striving to exceed expectations with every job. Trust us to keep
+              your home or business comfortable year-round.
+            </p>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
