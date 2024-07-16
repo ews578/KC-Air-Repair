@@ -1,8 +1,11 @@
+import "/style.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image"; // Import the Image component
+ 
+
 
 function Home() {
   return (
@@ -21,9 +24,9 @@ function ContainerIntro() {
     <div className="intro">
       <Row>
         <Col>
-      <Card>
-        <Card.Img variant="top" src="assets/kansascity.jpg" />
-      </Card>
+          <Card>
+            <Card.Img variant="top" src="assets/kansascity.jpg" />
+          </Card>
           <h1>Kansas City's Trusted Heating and Cooling Company</h1>
           <p>
             KC Air Repair is dedicated to delivering top-notch service and

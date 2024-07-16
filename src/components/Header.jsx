@@ -1,15 +1,17 @@
+
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import '/style.css'; // Import a CSS file for styling
 
 function Header({ currentPage, handlePageChange }) {
   return (
     <>
-      <Card>
+      <Card className="header-card">
         <Card.Body>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+          <Card.Text className="header-text">
+            KC Air Repair
           </Card.Text>
+
           <ul className="nav nav-tabs">
             <li className="nav-item">
               <a
