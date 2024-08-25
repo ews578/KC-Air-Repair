@@ -14,26 +14,26 @@ export default function PageContainer() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   const renderPage = () => {
-    if (currentPage === 'Home') {
-      return <Home />;
-    }
-    if (currentPage === 'Coupons') {
-      return <Coupons />;
-    }
-    if (currentPage === 'Services') {
-      return <Services handlePageChange={handlePageChange} />;
-    }
-    if (currentPage === 'Heating') {
-      return <Heating />;
-    }
-    if (currentPage === 'Cooling') {
-      return <Cooling />;
-    }
-    if (currentPage === 'Maintenance') {
-      return <Maintenance />;
-    }
-    return <Contact />;
-  };
+  if (currentPage === 'Home') {
+    return <Home />;
+  }
+  if (currentPage === 'Coupons') {
+    return <Coupons />;
+  }
+  if (currentPage === 'Services') {
+    return <Services handlePageChange={handlePageChange} />; // Pass handlePageChange as a prop to Services component
+  }
+  if (currentPage === 'Heating') {
+    return <Heating />;
+  }
+  if (currentPage === 'Cooling') {
+    return <Cooling />;
+  }
+  if (currentPage === 'Maintenance') {
+    return <Maintenance />;
+  }
+  return <Contact />;
+};
 
   return (
     <div className="page-container"> {/* Add a CSS class for styling */}

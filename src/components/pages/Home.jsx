@@ -1,3 +1,5 @@
+import React from "react";
+import { Button } from 'react-bootstrap';
 import "/style.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -42,8 +44,11 @@ function ContainerIntro() {
     </div>
   );
 }
+function ServicesProvided({ handlePageChange }) {
+  const handleServicesProvidedClick = () => {
+    handlePageChange('Services');
+  };
 
-function ServicesProvided() {
   return (
     <div className="services-provided">
       <Container className="mt-3 mb-3">
@@ -81,6 +86,7 @@ function ServicesProvided() {
                 and experience the difference of working with a trusted local
                 service provider.
               </p>
+              <Button variant="primary" onClick={handleServicesProvidedClick}>Schedule Service</Button>
             </div>
           </Col>
         </Row>
@@ -91,62 +97,73 @@ function ServicesProvided() {
 
 function ServiceArea() {
   return (
-    <div
-      className="service-area"
-      style={{
-        backgroundImage: `url("assets/kcmaps.jpg")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        position: "relative",
-      }}
-    >
-      <div className="overlay"></div>
-      <Container className="mt-3 mb-3">
-        <Row>
-          <Col xs={12} md={6}>
-            <div>
-              <h1 style={{ color: "#ffffff" }}>
-                Serving the KC Metro and neighboring communities
-              </h1>
-              <p style={{ color: "#ffffff" }}>
-                We're proud to offer a full range of top quality heating and air
-                conditioning services to homes and businesses across the Kansas
-                City Metro and following area.
-              </p>
-              <ul className="cities" style={{ color: "#ffffff" }}>
-                <li>Kansas City, MO</li>
-                <li>Mission, KS</li>
-                <li>Leawood, KS</li>
-                <li>Overland Park, KS</li>
-                <li>Prairie Village, KS</li>
-                <li>Lenexa, KS</li>
-                <li>Shawnee, KS</li>
-                <li>Parkville, MO</li>
-                <li>Olathe, KS</li>
-                <li>Gladstone, MO</li>
-                <li>Leavenworth, KS</li>
-                <li>Lansing, KS</li>
-                <li>Basehor, KS</li>
-                <li>Bonner Springs, KS</li>
-              </ul>
-            </div>
-          </Col>
-          <Col xs={12} md={6}>
-            {/* You can remove the Image component */}
-          </Col>
-        </Row>
-      </Container>
+    <div className="service-area" style={{ position: "relative" }}>
+      <div
+        className="background-image"
+        style={{
+          backgroundImage: `url("assets/kcmaps.jpg")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          opacity: .1, 
+        }}
+      ></div>
+     <Container className="blue-container" style={{ backgroundColor: "#007bff", color: "#ffffff", padding: "40px", marginBottom: "40px" }}>
+  <Row>
+    <Col xs={12} md={6}>
+      <div className="text-content">
+        <h1 style={{ color: "#ffffff" }}>
+          Serving the KC Metro and neighboring communities
+        </h1>
+        <p style={{ color: "#ffffff" }}>
+          We're proud to offer a full range of top quality heating and air
+          conditioning services to homes and businesses across the Kansas
+          City Metro and following area.
+        </p>
+      </div>
+    </Col>
+    <Col xs={12} md={6}>
+      <div className="cities-container">
+      <div style={{ textAlign: "center" }}>
+        <h2 style={{ color: "#ffffff" }}>Communities We Serve:</h2>
+        <ul className="cities" style={{ color: "#ffffff", listStyleType: "square", display: "flex", flexWrap: "wrap"}}>
+          <li style={{ flex: "0 0 50%", paddingRight: "150px" }}>Kansas City, MO</li>
+          <li style={{ flex: "0 0 50%", paddingRight: "150px" }}>Mission, KS</li>
+          <li style={{ flex: "0 0 50%", paddingRight: "150px" }}>Leawood, KS</li>
+          <li style={{ flex: "0 0 50%", paddingRight: "150px"}}>Overland Park, KS</li>
+          <li style={{ flex: "0 0 50%", paddingRight: "150px" }}>Prairie Village, KS</li>
+          <li style={{ flex: "0 0 50%", paddingRight: "150px"}}>Lenexa, KS</li>
+          <li style={{ flex: "0 0 50%", paddingRight: "150px" }}>Shawnee, KS</li>
+          <li style={{ flex: "0 0 50%", paddingRight: "150px" }}>Parkville, MO</li>
+          <li style={{ flex: "0 0 50%", paddingRight: "150px" }}>Olathe, KS</li>
+          <li style={{ flex: "0 0 50%", paddingRight: "150px" }}>Gladstone, MO</li>
+          <li style={{ flex: "0 0 50%", paddingRight: "150px" }}>Leavenworth, KS</li>
+          <li style={{ flex: "0 0 50%", paddingRight: "150px" }}>Lansing, KS</li>
+          <li style={{ flex: "0 0 50%", paddingRight: "150px" }}>Basehor, KS</li>
+          <li style={{ flex: "0 0 50%", paddingRight: "150px" }}>Bonner Springs, KS</li>
+        </ul>
+        </div>
+      </div>
+    </Col>
+  </Row>
+</Container>
+
     </div>
   );
 }
 
+
 function Choice() {
   return (
     <div className="choice">
-      <Container style={{ marginBottom: '20px' }}> {/* Add margin-bottom to create spacing */}
+      <Container style={{ marginBottom: '40px' }}> 
         <Row>
           <Col xs={6} md={8}>
-            <h1 style={{ textAlign: 'center' }}>Why choose us?</h1> {/* Center the h1 tag */}
+            <h1 style={{ textAlign: 'center' }}>Why choose us?</h1> 
             <p>
               When it comes to your HVAC needs, choosing KC Air Repair means
               choosing reliability, expertise, and unparalleled customer
@@ -160,6 +177,7 @@ function Choice() {
               striving to exceed expectations with every job. Trust us to keep
               your home or business comfortable year-round.
             </p>
+            <Button variant="primary">Learn More</Button>
           </Col>
           <Col xs={6} md={4}>
             <Image
