@@ -1,17 +1,20 @@
-
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import '/style.css'; // Import a CSS file for styling
+import '/style.css'; 
 
 function Header({ currentPage, handlePageChange }) {
   return (
     <>
       <Card className="header-card">
-        <Card.Body>
+      <Card.Body className="header-body">
           <Card.Text className="header-text">
-            KC Air Repair
+            <img 
+              src="assets/kar no buff.png" 
+              alt="KC Air Repair Logo" 
+              className="logo" 
+              style={{ width: '200px', height: 'auto' }} 
+            />
           </Card.Text>
-
           <ul className="nav nav-tabs">
             <li className="nav-item">
               <a

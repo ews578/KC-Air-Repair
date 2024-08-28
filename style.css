@@ -50,12 +50,43 @@
   .service-area p {
     font-size: 1.2em; 
   }
-/* 
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-  } */
+  
+  .header-card {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: left;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-right: 10px; /* Adjust the spacing between links as needed */
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: black; 
+  }
+  
+  .nav-link.active {
+    font-weight: bold; 
+  }
+
+  .logo {
+     float: left; 
+  margin-right: 10px; 
+  max-width: 100%;
+  }
+
+  .header-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
