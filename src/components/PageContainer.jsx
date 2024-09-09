@@ -16,7 +16,7 @@ export default function PageContainer() {
   const renderPage = () => {
     switch (currentPage) {
       case 'Home':
-        return <Home />;
+        return <Home handlePageChange={handlePageChange} />;
       case 'Coupons':
         return <Coupons />;
       case 'Services':

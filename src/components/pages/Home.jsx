@@ -7,11 +7,11 @@ import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 
-function Home() {
+function Home({ handlePageChange }) {
   return (
     <>
       <ContainerIntro />
-      <ServicesProvided />
+      <ServicesProvided handlePageChange={handlePageChange} />
       <ServiceArea />
       <Choice />
     </>
@@ -44,9 +44,14 @@ function ContainerIntro() {
     </div>
   );
 }
+
 function ServicesProvided({ handlePageChange }) {
   const handleServicesProvidedClick = () => {
-    handlePageChange('Services');
+    if (handlePageChange) {
+      handlePageChange('Contact');
+    } else {
+      console.error('handlePageChange is not a function');
+    }
   };
 
   return (
