@@ -1,4 +1,3 @@
-// Heating.js
 import React from 'react';
 import heatingImage from '/assets/furnace check.jpg'; // Import your image file
 

@@ -24,7 +24,7 @@ export default function PageContainer() {
       case 'Heating':
         return <Heating handlePageChange={handlePageChange} />;
       case 'Cooling':
-        return <Cooling />;
+        return <Cooling handlePageChange={handlePageChange} />;
       case 'Maintenance':
         return <Maintenance />;
       default:

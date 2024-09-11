@@ -1,4 +1,11 @@
-function Cooling() {
+import React from 'react';
+import coolingImage from '/assets/tech.jpg';
+
+function Cooling({ handlePageChange }) {
+  const handleGoBack = () => {
+    handlePageChange('Services');
+  };
+
   return (
     <div>
       <h1>Cooling Services</h1>
@@ -21,6 +28,10 @@ function Cooling() {
         <p> Trust us to keep your home cool and comfortable
         with our comprehensive AC services. We look forward to serving you!
       </p>
+      <button onClick = {handleGoBack}>Back to Services</button>
+      <div style={{ flex: 1, marginLeft: 'auto' }}>
+        <img src={coolingImage} alt="Cooling Image" style={{ width: '100%' }} />
+      </div>
     </div>
   );
 }
