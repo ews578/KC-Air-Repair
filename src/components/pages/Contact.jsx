@@ -1,20 +1,30 @@
+import React from "react";
+import ContactForm from "./ContactForm"; 
+import "/style.css"; 
+
 export default function Contact() {
   return (
-    <div>
-      <h1>Contact Page</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
+    <div className="contact-container">
+      <div className="contact-content">
+        <div className="contact-text">
+          <h1>Contact Page</h1>
+          <p>
+            To request service you can call us directly at 913-555-5555 or simply fill out the form below. Provide us with
+            your contact details and a brief description of the service you need. Our team will review your request and get
+            back to you as soon as possible. Please be sure to include any relevant information that will help us understand
+            your needs better.
+          </p>
+          <ContactForm />
+        </div>
+        <div className="contact-images">
+          <div className="contact-image">
+            <img src="/assets/contact us.jpg" alt="Contact" />
+          </div>
+          <div className="all-brands-image">
+            <img src="/assets/all brands.jpg" alt="All Brands" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
