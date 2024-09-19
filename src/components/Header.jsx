@@ -40,7 +40,7 @@ function Header({ currentPage, handlePageChange }) {
                 onClick={() => handlePageChange('Coupons')}
                 className={currentPage === 'Coupons' ? 'nav-link active' : 'nav-link'}
               >
-                Coupons
+                Special Offers
               </a>
             </li>
             <li className="nav-item">
